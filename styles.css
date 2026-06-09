@@ -205,6 +205,8 @@ h3 {
     box-shadow: 0 8px 24px -8px rgba(37, 70, 48, 0.2);
 }
 
+
+
 .logo-mark {
     display: inline-flex;
     align-items: center;
@@ -867,6 +869,10 @@ h3 {
 @media (max-width: 720px) {
     .section {
         padding: 4.25rem 0;
+    }
+
+    .logo-img {
+        height: 100px;
     }
 
     .nav-toggle {
