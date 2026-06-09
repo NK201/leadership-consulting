@@ -18,35 +18,7 @@
   </head>
   <body>
     <!-- Header / Navigation -->
-    <header class="site-header" id="top">
-      <div class="container header-inner">
-        <a href="#top" class="logo">
-          <img
-            src="logo2.svg"
-            alt="ACK-Coaching – Annemarie Clermont-Karow"
-            class="logo-img"
-          />
-        </a>
-        <nav class="main-nav" aria-label="Hauptnavigation">
-          <button
-            class="nav-toggle"
-            aria-expanded="false"
-            aria-controls="nav-menu"
-            aria-label="Menü öffnen"
-          >
-            <span></span><span></span><span></span>
-          </button>
-          <ul class="nav-menu" id="nav-menu">
-
-            <li><a href="#leistungen">Ich biete</a></li>
-                        <li><a href="#ueber-mich">Über mich</a></li>
-
-            <li><a href="#vorgehen">Vorgehen</a></li>
-            <li><a href="#kontakt" class="nav-cta">Kontakt</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <div id="site-header"></div>
 
     <main>
       <!-- Hero -->
@@ -94,45 +66,38 @@
       <section class="section" id="leistungen">
             <div class="container">
                 <div class="section-head">
-                    <p class="eyebrow">Angebote</p>
-                    <h2>Begleitung, die zu deinem Leben passt</h2>
+                    <p class="eyebrow">Mein Angebot</p>
+                    <h2 class="angebote-headline">Finde (raus) was du brauchst</h2>
                     <p class="section-intro">
                         Ob persönliche Themen, berufliche Weichenstellungen oder die Entwicklung
                         eines ganzen Teams – jedes Coaching ist so individuell wie du.
                     </p>
                 </div>
                 <div class="cards">
-                    <article class="card">
+                    <article class="card card-1">
                         <div class="card-icon" aria-hidden="true">◆</div>
-                        <h3>Life-Coaching</h3>
+                        <h3>Coaching</h3>
                         <p>
-                            Persönliche Begleitung in Umbruch- und Entscheidungsphasen – für mehr
-                            Klarheit über das, was dir wirklich wichtig ist, und den Mut, danach zu leben.
+                            Entscheidungs- und Umbruchsphasen für Orientierung, Klarheit und mehr Selbstwirksamkeit.
                         </p>
+                        <a href="coaching.html" class="card-link">Mehr erfahren →</a>
                     </article>
-                    <article class="card">
+                    <article class="card card-2">
                         <div class="card-icon" aria-hidden="true">▲</div>
                         <h3>Balance &amp; Resilienz</h3>
                         <p>
-                            Wege aus Stress und Erschöpfung hin zu echter Work-Life-Balance –
-                            mit Achtsamkeit, gesunden Routinen und innerer Stärke.
+                            Wege aus Stress und Erschöpfung hin zu echter Balance – mit Achtsamkeit, gesunden Routinen und innerer Stärke.
                         </p>
+                        <a href="balance-resilienz.html" class="card-link">Mehr erfahren →</a>
                     </article>
-                    <article class="card">
-                        <div class="card-icon" aria-hidden="true">●</div>
-                        <h3>Persönliche Entwicklung</h3>
-                        <p>
-                            Selbstvertrauen, Werte und Ziele neu ausrichten – damit du deinen
-                            eigenen Weg mit Leichtigkeit und Zuversicht gehst.
-                        </p>
-                    </article>
-                    <article class="card">
+                    <article class="card card-3">
                         <div class="card-icon" aria-hidden="true">■</div>
-                        <h3>Business- &amp; Team-Coaching</h3>
+                        <h3>Business-Coaching</h3>
                         <p>
                             Für Unternehmen: Coaching für mehr Wohlbefinden, Zusammenhalt und
                             gesunde Zusammenarbeit – weil starke Teams aus starken Menschen bestehen.
                         </p>
+                        <a href="business-coaching.html" class="card-link">Mehr erfahren →</a>
                     </article>
                 </div>
             </div>
@@ -270,7 +235,7 @@
       </section>
 
       <!-- Stimmen -->
-      <section class="section section-alt" id="stimmen">
+      <!-- <section class="section section-alt" id="stimmen">
         <div class="container">
           <div class="section-head">
             <p class="eyebrow">Stimmen</p>
@@ -311,7 +276,7 @@
             </figure>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- Kontakt / CTA -->
       <section class="section contact" id="kontakt">
@@ -343,39 +308,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div class="footer-brand">
-          <img src="logo2.svg" alt="ACK-Coaching" class="footer-logo" />
-          <p>ACK-Coaching – Annemarie Clermont-Karow</p>
-        </div>
-        <nav class="footer-nav" aria-label="Footer-Navigation">
-          <a href="#leistungen">Leistungen</a>
-          <a href="#ueber-mich">Über mich</a>
-          <a href="#kontakt">Kontakt</a>
-        </nav>
-        <div class="footer-legal">
-          <a href="#">Impressum</a>
-          <a href="#">Datenschutz</a>
-          <p>&copy; 2026 Annemarie Clermont-Karow</p>
-        </div>
-      </div>
-    </footer>
-
-    <script>
-      // Mobile-Navigation
-      const toggle = document.querySelector(".nav-toggle");
-      const menu = document.querySelector(".nav-menu");
-      toggle.addEventListener("click", () => {
-        const open = menu.classList.toggle("is-open");
-        toggle.setAttribute("aria-expanded", String(open));
-      });
-      menu.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => {
-          menu.classList.remove("is-open");
-          toggle.setAttribute("aria-expanded", "false");
-        });
-      });
-    </script>
+    <div id="site-footer"></div>
+    <script src="components.js"></script>
   </body>
 </html>
