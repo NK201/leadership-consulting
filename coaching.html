@@ -20,22 +20,76 @@
     <div id="site-header"></div>
 
     <main>
-      <section class="section">
+      <section class="section section--page-top">
         <div class="container" style="max-width: 760px;">
           <p class="eyebrow">Mein Angebot</p>
           <h1>Coaching</h1>
-          <p class="section-intro">
-            Entscheidungs- und Umbruchsphasen für Orientierung, Klarheit und mehr Selbstwirksamkeit.
+          <p>
+            Entscheidungs- und Umbruchsphasen für Orientierung, Klarheit und mehr Selbstwirksamkeit.<br><br>
           </p>
           <p>
-            Inhalt folgt.
+            Im Coaching richten wir den Blick auf deine aktuellen Fragestellungen –
+            egal, ob persönlicher, privater oder beruflicher Natur.
           </p>
-          <a href="index.html#leistungen" class="btn btn-primary" style="margin-top: 2rem; display: inline-block;">← Zurück zur Übersicht</a>
+          <p>
+            Meine Aufgabe sehe ich darin, dich professionell zu unterstützen, deine
+            Potenziale zu erkennen, anzunehmen sowie für deine Weiterentwicklung
+            einzusetzen – und je nach Situation mehr Klarheit über
+          </p>
+          <ul style="margin: 1rem 0 1rem 1.5rem; display: grid; gap: 0.4rem; color: var(--color-ink-soft);">
+            <li>den nächsten Schritt,</li>
+            <li>eine Entscheidung oder</li>
+            <li>die Akzeptanz des aktuellen Status quo</li>
+          </ul>
+          <p>
+            und damit auch mehr Stärke, das Gefühl von Selbstwirksamkeit und
+            Sicherheit zu erlangen.
+          </p>
+
+          <div style="display: flex; align-items: flex-start; gap: 2rem; margin-top: 3rem; flex-wrap: wrap;">
+            <a href="index.html#leistungen" class="btn btn-primary" style="flex-shrink: 0; align-self: flex-start;">← Zurück zur Übersicht</a>
+            <div class="card card--expandable" id="anlaesse-card" style="flex: 1; min-width: 240px;">
+              <div class="card-expand-toggle">
+                <h2 style="font-size: 1.6rem; margin-bottom: 0.5rem;">Anlässe</h2>
+                <p style="color: var(--color-ink-soft); font-size: 0.95rem;">… so vielfältig wie das Leben selbst. <span class="card-expand-icon">▼</span></p>
+              </div>
+              <div class="card-expand-body">
+                <p style="margin-top: 1.25rem;"><strong>Anlässe sind häufig:</strong></p>
+                <ul style="margin: 0.75rem 0 0.75rem 1.5rem; display: grid; gap: 0.35rem; color: var(--color-ink-soft);">
+                  <li><strong>Veränderungen</strong></li>
+                  <li><strong>Krisen</strong></li>
+                  <li><strong>Existenzängste</strong></li>
+                  <li><strong>Konflikte</strong></li>
+                  <li><strong>Krankheit</strong></li>
+                  <li><strong>Tod</strong></li>
+                </ul>
+                <p style="color: var(--color-ink-soft); font-size: 0.93rem;">
+                  im privaten oder beruflichen Umfeld und damit verbundene Fragestellungen,
+                  Unsicherheiten und/oder das Gefühl von Überforderung. Problematisch wird
+                  es oft erst dann, wenn mehrere Themen aufeinandertreffen, die Orientierung
+                  verloren geht und man allein keine klare Linie mehr reinbekommt – das
+                  Gedankenkarussell kreist, das Hamsterrad dreht und dreht sich oder gut
+                  gemeinte Rat„Schläge" prasseln auf einen ein.
+                </p>
+                <p style="margin-top: 1.1rem;"><strong>Anlässe können aber auch sein:</strong></p>
+                <ul style="margin: 0.75rem 0 0 1.5rem; display: grid; gap: 0.6rem; color: var(--color-ink-soft); font-size: 0.93rem;">
+                  <li><strong>Entscheidungsfindung</strong> in puncto Familienplanung, neuer Job, Teilzeitbeschäftigung, berufliche Umorientierung, freiberufliche Tätigkeit</li>
+                  <li><strong>Ressourcenentwicklung</strong> im beruflichen Kontext, bspw. Führungskompetenzen auszubauen, Konfliktfähigkeit/Durchsetzungsvermögen stärken, Abgrenzung lernen</li>
+                  <li><strong>Enablen</strong> bspw. um Auswahlverfahren erfolgreich zu durchlaufen, sich auf neue Aufgaben vorzubereiten, Meetings abzuhalten</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
     <div id="site-footer"></div>
     <script src="components.js"></script>
+    <script>
+      document.getElementById('anlaesse-card').addEventListener('click', function () {
+        this.classList.toggle('is-open');
+      });
+    </script>
   </body>
 </html>

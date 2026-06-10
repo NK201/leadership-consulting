@@ -71,6 +71,10 @@ a {
     padding: 6rem 0;
 }
 
+.section--page-top {
+    padding-top: 10rem;
+}
+
 .section-alt {
     background: var(--color-bg-alt);
 }
@@ -496,6 +500,37 @@ h3 {
 
 .card-link:hover {
     color: var(--color-accent-soft);
+}
+
+.card--static {
+    cursor: default;
+}
+
+.card--static:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: var(--color-line);
+}
+
+.card--expandable .card-expand-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.45s ease;
+}
+
+.card--expandable.is-open .card-expand-body {
+    max-height: 1200px;
+}
+
+.card-expand-icon {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    font-size: 0.75rem;
+    color: var(--color-accent);
+}
+
+.card--expandable.is-open .card-expand-icon {
+    transform: rotate(180deg);
 }
 
 /* ---------- Über mich ---------- */
