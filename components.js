@@ -1,3 +1,26 @@
+// ---- Preview Gate (vor Go-Live entfernen) ----
+(function () {
+  const HASH = '36e11b86750178bc2d659d7779dbfdf28cee8c60a6a804e47d3ef1ae85f4a70c';
+  const KEY = 'ack_preview_auth';
+  if (sessionStorage.getItem(KEY) === '1') return;
+
+  const input = prompt('Passwort:');
+  if (!input) {
+    document.documentElement.innerHTML = '<p style="font-family:sans-serif;padding:2rem">Kein Zugriff.</p>';
+    throw new Error('unauthorized');
+  }
+
+  crypto.subtle.digest('SHA-256', new TextEncoder().encode(input)).then(buf => {
+    const hex = Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+    if (hex !== HASH) {
+      document.documentElement.innerHTML = '<p style="font-family:sans-serif;padding:2rem">Kein Zugriff.</p>';
+    } else {
+      sessionStorage.setItem(KEY, '1');
+    }
+  });
+})();
+// ---- Ende Preview Gate ----
+
 async function loadPartial(id, url) {
   const el = document.getElementById(id);
   if (!el) return;
