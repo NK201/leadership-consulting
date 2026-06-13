@@ -80,7 +80,7 @@ a {
 }
 
 .section-head {
-    max-width: 680px;
+    max-width: 700px;
     margin: 0 auto 3.5rem;
     text-align: center;
 }
@@ -210,7 +210,6 @@ h3 {
 }
 
 
-
 .logo-mark {
     display: inline-flex;
     align-items: center;
@@ -293,6 +292,16 @@ h3 {
     position: relative;
 }
 
+/* Bridges the visual gap so hover doesn't break when moving to the dropdown */
+.nav-item--dropdown::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 0.75rem;
+}
+
 .nav-dropdown {
     display: none;
     position: absolute;
@@ -304,7 +313,8 @@ h3 {
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     list-style: none;
-    min-width: 200px;
+    min-width: 180px;
+    max-width: 220px;
     padding: 0.5rem 0;
     z-index: 100;
 }
@@ -317,7 +327,8 @@ h3 {
     display: block;
     padding: 0.65rem 1.25rem;
     font-size: 0.92rem;
-    white-space: nowrap;
+    white-space: normal;
+    line-height: 1.35;
     color: var(--color-ink-soft);
     transition: color var(--transition), background var(--transition);
 }
@@ -400,7 +411,7 @@ h3 {
     font-size: 1.2rem;
     color: rgba(255, 255, 255, 0.92);
     margin: 1.5rem 0 2.25rem;
-    max-width: 560px;
+    max-width: 590px;
 }
 
 .hero-actions {
@@ -481,7 +492,7 @@ h3 {
 }
 
 .card {
-    background: var(--color-bg);
+    background: var(--color-bg-alt);
     border: 1px solid var(--color-line);
     border-radius: var(--radius);
     padding: 2.25rem 2rem;
@@ -571,7 +582,7 @@ h3 {
 }
 
 .card--expandable.is-open .card-expand-body {
-    max-height: 1200px;
+    max-height: 4000px;
 }
 
 .card-expand-icon {
@@ -583,6 +594,52 @@ h3 {
 
 .card--expandable.is-open .card-expand-icon {
     transform: rotate(180deg);
+}
+
+/* ---------- FadenZeit Layouts ---------- */
+.fz-img-text {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: start;
+    margin-bottom: 2.5rem;
+}
+
+.fz-two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.fz-img-placeholder {
+    background: var(--color-bg-alt);
+    border-radius: var(--radius);
+    aspect-ratio: 3 / 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-ink-soft);
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid var(--color-line);
+}
+
+.fz-highlight {
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-family: var(--font-serif);
+    color: var(--color-accent);
+    text-align: center;
+    padding: 1.5rem 0 0.5rem;
+}
+
+@media (max-width: 720px) {
+    .fz-img-text,
+    .fz-two-col {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ---------- Über mich ---------- */
@@ -699,15 +756,18 @@ h3 {
 /* ---------- Vorgehen / Steps ---------- */
 .steps {
     list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
     counter-reset: step;
 }
 
 .step {
     position: relative;
-    padding: 2.25rem 1.75rem;
+    flex: 1 1 180px;
+    max-width: 210px;
+    padding: 1.75rem 1.25rem;
     border-radius: var(--radius);
     background: var(--color-bg);
     border: 1px solid var(--color-line);
@@ -1006,6 +1066,32 @@ h3 {
     .nav-cta {
         text-align: center;
         margin-top: 0.75rem;
+    }
+
+    .nav-item--dropdown {
+        border-bottom: none !important;
+    }
+
+    .nav-dropdown {
+        display: block;
+        position: static;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        padding: 0;
+        min-width: auto;
+        background: transparent;
+    }
+
+    .nav-dropdown li {
+        border-bottom: 1px solid var(--color-line);
+    }
+
+    .nav-dropdown li a {
+        padding-left: 1.75rem;
+        font-size: 0.9rem;
+        color: var(--color-ink-soft);
     }
 
     .footer-inner {
