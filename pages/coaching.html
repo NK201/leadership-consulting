@@ -14,50 +14,41 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Marck+Script&family=Inter:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
     <div id="site-header"></div>
 
     <main>
       <section class="section section--page-top">
-        <div class="container" style="max-width: 760px;">
-          <a href="index.html#leistungen" class="btn btn-primary" style="margin-bottom: 2rem; display: inline-block;">← Zurück zur Übersicht</a>
-          <p class="eyebrow">Mein Angebot &nbsp;·&nbsp; <a href="coaching.html" class="eyebrow-active">Coaching</a> &nbsp;·&nbsp; <a href="balance-resilienz.html">Balance &amp; Resilienz</a></p>
+        <div class="container" style="max-width: 1100px;">
+          <a href="/#leistungen" class="btn btn-primary" style="margin-bottom: 2rem; display: inline-block;">← Zurück zur Übersicht</a>
+          <p class="eyebrow">Mein Angebot</p>
           <h1>Coaching</h1>
-          <p>
-           Mehr Orientierung, Klarheit und mehr Selbstwirksamkeit in Entscheidungs- und Umbruchsphasen.<br><br>
-          </p>
-          <!-- <p>
-            Im Coaching richten wir den Blick auf deine aktuellen Fragestellungen –
-            egal, ob persönlicher, privater oder beruflicher Natur.
-          </p>
-          <p>
-            Meine Aufgabe sehe ich darin, dich professionell zu unterstützen, deine
-            Potenziale zu erkennen, anzunehmen sowie für deine Weiterentwicklung
-            einzusetzen – und je nach Situation mehr Klarheit über
-          </p>
-          <ul style="margin: 1rem 0 1rem 1.5rem; display: grid; gap: 0.4rem; color: var(--color-ink-soft);">
-            <li>den nächsten Schritt,</li>
-            <li>eine Entscheidung oder</li>
-            <li>die Akzeptanz des aktuellen Status quo</li>
-          </ul>
-          <p>
-            und damit auch mehr Stärke, das Gefühl von Selbstwirksamkeit und
-            Sicherheit zu erlangen.
-          </p> -->
 
-          <p>
-            Im Coaching betrachten wir aktuelle berufliche oder persönliche Fragestellungen aus unterschiedlichen Perspektiven. Gemeinsam
-            richten wir den Blick auf vorhandene Ressourcen, bereits Erreichtes und die Möglichkeiten, die oft schon vorhanden sind, aber
-            im Alltag oder in herausfordernden Situationen aus dem Blick geraten. 
-          </p>
-          <br>
-          <p>
-            Ziel ist es, Klarheit zu gewinnen, neue Handlungsspielräume zu erkennen und Entscheidungen bewusst treffen zu können.
-            Manchmal zeigt sich dabei ein konkreter nächster Schritt, manchmal eine neue Perspektive – und manchmal die Erkenntnis, die
-            Situation annehmen zu können / wollen und einen guten Umgang mit ihr zu finden. Nicht jede Situation muss verändert werden.
-          </p>
+          <div class="page-intro-grid">
+            <div class="page-intro-text">
+              <p>
+               Mehr Orientierung, Klarheit und mehr Selbstwirksamkeit in Entscheidungs- und Umbruchsphasen.
+              </p>
+              <br>
+              <p>
+                Im Coaching betrachten wir aktuelle berufliche oder persönliche Fragestellungen aus unterschiedlichen Perspektiven. Gemeinsam
+                richten wir den Blick auf vorhandene Ressourcen, bereits Erreichtes und die Möglichkeiten, die oft schon vorhanden sind, aber
+                im Alltag oder in herausfordernden Situationen aus dem Blick geraten. 
+              </p>
+              <br>
+              <p>
+                Ziel ist es, Klarheit zu gewinnen, neue Handlungsspielräume zu erkennen und Entscheidungen bewusst treffen zu können.
+                Manchmal zeigt sich dabei ein konkreter nächster Schritt, manchmal eine neue Perspektive – und manchmal die Erkenntnis, die
+                Situation annehmen zu können / wollen und einen guten Umgang mit ihr zu finden. Nicht jede Situation muss verändert werden.
+              </p>
+            </div>
+            <div class="page-intro-image">
+              <img src="/images/wald-weg.webp" alt="Waldweg" />
+              <blockquote class="image-quote">Wege entstehen dadurch, dass man sie geht!</blockquote>
+            </div>
+          </div>
 
 
 
@@ -88,7 +79,7 @@
                 <p style="color: var(--color-ink-soft); font-size: 0.93rem;">
                   Nicht selten kommen mehrere Themen gleichzeitig zusammen. Gedanken kreisen, unterschiedliche Erwartungen wirken auf
                   einen ein und die eigene Orientierung gerät aus dem Blick. Coaching schafft Raum, innezuhalten, die Situation zu sortieren
-                  und den Blick wieder auf das zu richten, was für Sie wichtig und stimmig ist.
+                  und den Blick wieder auf das zu richten, was wichtig und stimmig ist.
                 </p>
               </div>
             </div>
@@ -135,7 +126,7 @@
               <span class="step-number">04</span>
               <h3>Wachsen</h3>
               <p>
-                Du gehst gestärkt deinen Weg – mit mehr Klarheit, Balance und
+                Du gehst gestärkt deinen Weg – mit (mehr) Klarheit, Orientierung, und
                 Vertrauen in dich selbst. Aus Klarheit entsteht Richtung. Du
                 erkennst stimmige nächste Schritte und triffst bewusste
                 Entscheidungen.
@@ -156,7 +147,7 @@
     </main>
 
     <div id="site-footer"></div>
-    <script src="components.js"></script>
+    <script src="/components.js"></script>
     <script>
       document.getElementById('anlaesse-card').addEventListener('click', function () {
         this.classList.toggle('is-open');

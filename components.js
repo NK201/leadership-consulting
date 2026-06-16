@@ -51,8 +51,8 @@ function initMobileNav() {
 
 document.addEventListener('DOMContentLoaded', async () => {
   await Promise.all([
-    loadPartial('site-header', 'partials/navbar.html'),
-    loadPartial('site-footer', 'partials/footer.html'),
+    loadPartial('site-header', '/partials/navbar.html'),
+    loadPartial('site-footer', '/partials/footer.html'),
   ]);
   initMobileNav();
 });
