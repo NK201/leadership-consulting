@@ -752,7 +752,6 @@ h3 {
     position: relative;
     padding-left: 1.75rem;
     color: var(--color-ink);
-    font-weight: 500;
 }
 
 .about-list li::before {
@@ -761,6 +760,10 @@ h3 {
     left: 0;
     color: var(--color-gold);
     font-weight: 700;
+}
+
+.about-me-headline {
+    max-width: 480px;
 }
 
 /* ---------- Page intro grid (text + image) ---------- */
