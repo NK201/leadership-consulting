@@ -685,12 +685,13 @@ h3 {
     position: absolute;
     bottom: 1.5rem;
     right: -1rem;
-    background: #fff;
+    background: var(--color-accent);
     border-radius: 12px;
     padding: 1rem 1.4rem;
     box-shadow: var(--shadow);
     display: flex;
     flex-direction: column;
+    color: white;
 }
 
 .about-badge strong {
@@ -721,15 +722,15 @@ h3 {
 .about-quote {
     margin: 2rem 0 0;
     padding: 1.1rem 1.4rem;
-    background: #fff;
     border-left: 3px solid var(--color-accent);
     border-radius: 0 var(--radius) var(--radius) 0;
     box-shadow: 0 4px 16px -6px rgba(37, 70, 48, 0.12);
-    font-family: 'Marck Script', cursive;
-    font-weight: 400;
-    font-size: 1.05rem;
-    font-weight: 600;
+    font-family: 'Satisfy', cursive;
+    font-size: 20px;    
+    font-weight: 300;
     line-height: 1.65;
+
+    background: var(--color-sage);
     color: var(--color-ink);
 }
 
